@@ -1,5 +1,6 @@
 # Pixel Shooter
-A simple two-player atari game fully coded with x86 assembly
+A simple two-player atari game fully coded with x86 16-bit assembly.  
+Developed for the Microprocessor course in the college.
 
 ## Description
 The purpose of the game is to either kill the enemy, or to survive with more health than the enemy before the time ends (60 seconds). 
@@ -19,7 +20,7 @@ the scan code of each button.
 
 ### Final Version
 The game is played on two distinct computes connected with serial port or with ethernet cable.  
-The game supports playing and two types of chatting: in-game and normal chatting.  
+This version supports 2 levels of playing and it also support chatting.  
 
 ## Download
 [Phase 1 Version](https://github.com/muhammad-sayed-mahdy/PixelShooter/blob/master/phase%201/pixel.exe),
@@ -27,7 +28,14 @@ The game supports playing and two types of chatting: in-game and normal chatting
 You can run the game using [DOSBox](https://www.dosbox.com) on newer versions of windows,  
 because the game uses 16-bit registers which is deprecated for newer versions of windows.   
 to run the game correctly, make cpu speed on DOSBox at least 16000 cycles.  
-### Connecting two PCs using ethernet cable
-1. On the first PC write on DOSBox: `serial1=nullmodem port:23`
-2. On the second PC write on DOSBox: `serial1=nullmodem server:<IPv4 PC1> port:23`
-3. To know the IPv4 of the first PC, use this [link](https://www.wikihow.com/Find-the-IP-Address-of-Your-PC?fbclid=IwAR2bSfj4reVqWoOLOL9beuLEwS30Gb0hfRkJypHsDVgNoZyjoYk6ZlwmwDE)
+You can run the final version of the game on the same PC or on two distinct PCs.  
+### Run the game on the same PC:  
+1. Write on DOSBox options `serial1 = directserial realport:COM1`, save it, then open DOSBox.  
+2. Write on DOSBox options `serial1 = directserial realport:COM2`, save it, and open a new DOSBox window.
+3. You now have two windows like if they were opend on two distinct PCs.
+
+### Run the game on two distinct PCs:
+1. Connect the two PCs by using ethernet cable.
+2. On the first PC write on DOSBox Options: `serial1=nullmodem port:23`
+3. On the second PC write on DOSBox Options: `serial1=nullmodem server:<IPv4 PC1> port:23`
+4. To know the IPv4 of the first PC, use this [link](https://www.wikihow.com/Find-the-IP-Address-of-Your-PC?fbclid=IwAR2bSfj4reVqWoOLOL9beuLEwS30Gb0hfRkJypHsDVgNoZyjoYk6ZlwmwDE)
